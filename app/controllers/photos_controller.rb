@@ -4,22 +4,23 @@ class PhotosController < ApplicationController
     end
 
     def new 
-        @post = Post.new
+        @photo = Photo.new
     end
 
     def create
-        @post = Post.new post_params
+        @photo = Photo.new photo_params
 
-        if @post.save
-            redirect_to @post, notice: "Your article was successfuly saved."
+        if @photo.save
+            redirect_to @photo, notice: "Your article was successfuly saved."
         else
             render 'new', notice: "Your article was not saved successfully."
+        end
     end
 
     private
 
-    def post_params
-        params.require(:post).permit(:location)
+    def photo_params
+        params.require(:photo).permit(:location)
     end
 
 end

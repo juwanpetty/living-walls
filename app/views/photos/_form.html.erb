@@ -1,0 +1,13 @@
+<%= bootstrap_form_for(@photo, class: 'form-wrapper') do |f| %>
+    <% if @photo.errors.any? %>
+        <h2><%= pluralize(@photo.errors.count, "error") %> prevented this photo from saving:</h2>
+        <ul>
+            <% @photo.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+        </ul>
+    <% end %>
+
+    <%= f.text_field :location %>
+    <%= f.submit "Submit" %>
+<% end %>
