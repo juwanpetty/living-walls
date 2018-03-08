@@ -1,0 +1,13 @@
+<div class="nav-item dropdown d-flex">
+    <a class="nav-link" href="#">About</a>
+
+    <% if user_signed_in? %>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= current_user.first_name + " " + current_user.last_name %>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to 'Edit Profile', edit_user_registration_path, class: 'dropdown-item' %>
+            <%= link_to 'Log Out', destroy_user_session_path, class: 'dropdown-item', method: :delete %>
+        </div>
+    <% end %>    
+</div>

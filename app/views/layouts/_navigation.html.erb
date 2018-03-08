@@ -7,17 +7,5 @@
         <%= link_to 'Brand Title', root_path, class: "brand" %>
     </div>
 
-    <div class="nav-item dropdown d-flex">
-        <a class="nav-link" href="#">About</a>
-
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-    </div>
+    <%= render 'layouts/navigation/dropdown' %>
 </nav>
