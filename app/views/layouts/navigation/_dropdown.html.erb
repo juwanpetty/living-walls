@@ -6,6 +6,7 @@
             <%= current_user.first_name + " " + current_user.last_name %>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to 'New Photo', new_photo_path, class: 'dropdown-item' %>
             <%= link_to 'Edit Profile', edit_user_registration_path, class: 'dropdown-item' %>
             <%= link_to 'Log Out', destroy_user_session_path, class: 'dropdown-item', method: :delete %>
         </div>
