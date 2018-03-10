@@ -1,5 +1,11 @@
 <%= image_tag @photo.image.url(:medium) %>
-<%= @photo.location %>
+
+<% if @photo.location_title? %>
+    <%= link_to @photo.location_title, @photo.location %>
+<% else %>
+    <%= link_to 'Location', @photo.location %>
+<% end %>
+
 <%= link_to 'Edit', edit_photo_path(@photo) %>
 <%= link_to 'Delete', photo_path(@photo), 
                                 method: :delete, 
