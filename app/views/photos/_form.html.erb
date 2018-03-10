@@ -1,4 +1,7 @@
-<%= bootstrap_form_for(@photo, class: 'form-wrapper') do |f| %>
+<%= bootstrap_form_for(@photo, 
+                        class: 'form-wrapper', 
+                        html: { multipart: true }) do |f| %>
+
     <% if @photo.errors.any? %>
         <h2><%= pluralize(@photo.errors.count, "error") %> prevented this photo from saving:</h2>
         <ul>
@@ -8,7 +11,7 @@
         </ul>
     <% end %>
 
-    <%= f.input :image, as: :file %>
+    <%= f.file_field :image %>
     <%= f.text_field :location %>
     <%= f.submit "Submit" %>
 <% end %>
