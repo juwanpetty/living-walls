@@ -1,1 +1,11 @@
-<h1>Hello World</h1>
+<main>
+    <ul class="feed">
+        <% @photo.each do |photo| %>
+            <li class="feed__item">
+                <%= link_to(photo) do %>
+                    <%= image_tag photo.image.url(:medium) %>
+                <% end %>
+            </li>
+        <% end %>
+    </ul>
+</main>
