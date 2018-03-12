@@ -39,6 +39,8 @@ gem 'devise';
 
 gem 'paperclip', '~> 5.2.1'
 
+gem 'will_paginate', '~> 3.1.1'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
