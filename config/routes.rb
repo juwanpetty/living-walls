@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   end
 
   resources :photos
-  root to: "pages#index"
+  root to: "photos#index"
 end
