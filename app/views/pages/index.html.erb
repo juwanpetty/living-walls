@@ -2,10 +2,20 @@
     <ul class="feed">
         <% @photo.each do |photo| %>
             <li class="feed__item">
-                <%= link_to(photo) do %>
-                    <%= image_tag photo.image.url(:medium) %>
-                <% end %>
+                
+                <%= render @photo %> 
+
             </li>
         <% end %>
     </ul>
+
+    <div id="paginate">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-sm-3">
+                    <%= will_paginate @photo %>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>

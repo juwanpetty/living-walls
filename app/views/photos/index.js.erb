@@ -1,0 +1,6 @@
+$('.feed').append('<%= j render(@photo) %>');
+<% if @photo.next_page %>
+  $('.pagination').replaceWith('<%= j will_paginate(@photo) %>');
+<% else %>
+  $('.pagination').remove();
+<% end %>
