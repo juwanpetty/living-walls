@@ -11,4 +11,6 @@ Rails.application.routes.draw do
 
   resources :photos
   root to: "pages#index"
+
+  get 'about', to: 'pages#about'
 end
